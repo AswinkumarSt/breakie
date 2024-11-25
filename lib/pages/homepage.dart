@@ -9,18 +9,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: GroceryHomePage(),
-    );
-  }
-}
-
-class GroceryHomePage extends StatelessWidget {
-  const GroceryHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
@@ -57,7 +45,7 @@ class GroceryHomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(top: 20,left: 0),
+                        margin: const EdgeInsets.only(top: 20, left: 0),
                         child: const Image(
                           image: AssetImage('assets/icons/Vector 4.png'),
                         ),
