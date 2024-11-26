@@ -21,7 +21,7 @@ class LoginPage extends StatelessWidget {
             child: Container(
               width: 289,
               height: 490,
-              padding: EdgeInsets.only(top: 20, left: 0),
+              padding: const EdgeInsets.only(top: 20, left: 0),
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.9),
                 borderRadius: BorderRadius.circular(20),
@@ -161,7 +161,25 @@ class LoginPage extends StatelessWidget {
                           endIndent: 20,
                         ),
                       ),
-                      
+                    ],
+                  ),
+                  const SizedBox(height: 0),
+                  const Text(
+                    'Login with',
+                    style: TextStyle(fontSize: 15, color: Colors.black87),
+                  ),
+                  Row(
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          //yahoo functionality
+                        },
+                        icon: const Image(
+                          image: AssetImage('assets/icons/Group.png'),
+                          height: 30,
+                          width: 10,
+                        ),
+                      ),
                     ],
                   )
                 ],
