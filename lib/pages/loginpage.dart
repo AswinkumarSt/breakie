@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
           Center(
             child: Container(
               width: 289,
-              height: 490,
+              height: 510,
               padding: const EdgeInsets.only(top: 20, left: 0),
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.9),
@@ -168,18 +168,46 @@ class LoginPage extends StatelessWidget {
                     'Login with',
                     style: TextStyle(fontSize: 15, color: Colors.black87),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 64),
+                    child: Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            //yahoo functionality
+                          },
+                          icon: const Image(
+                            image: AssetImage('assets/icons/Group.png'),
+                            
+                          ),
+                        ),
+                         IconButton(
+                          onPressed: () {
+                            //yahoo functionality
+                          },
+                          icon: const Image(
+                            image: AssetImage('assets/icons/Gmail.png'),
+                            
+                          ),
+                        ),
+                         IconButton(
+                          onPressed: () {
+                            //yahoo functionality
+                          },
+                          icon: const Image(
+                            image: AssetImage('assets/icons/Facebook.png'),
+                            
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                 
                   Row(
                     children: [
-                      IconButton(
-                        onPressed: () {
-                          //yahoo functionality
-                        },
-                        icon: const Image(
-                          image: AssetImage('assets/icons/Group.png'),
-                          height: 30,
-                          width: 10,
-                        ),
-                      ),
+                      IconButton(onPressed: () {
+                      
+                      }, icon: Icon(Icons.arrow_back_outlined),),
                     ],
                   )
                 ],
