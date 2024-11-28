@@ -117,6 +117,8 @@ class LoginPage extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
+                          Navigator.pop(context);
+                      Navigator.pushNamed(context, '/resetpage');
                           // Add Forgot Password Functionality
                         },
                         child: const Padding(
@@ -206,7 +208,8 @@ class LoginPage extends StatelessWidget {
                   Row(
                     children: [
                       IconButton(onPressed: () {
-                      
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, '/homepage');
                       }, icon: Icon(Icons.arrow_back_outlined),),
                     ],
                   )
