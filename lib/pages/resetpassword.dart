@@ -34,7 +34,7 @@ class ResetPage extends StatelessWidget {
                 ],
               ),
               child: Column(
-                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -93,7 +93,7 @@ class ResetPage extends StatelessWidget {
                         ),
                         suffixIcon: const Icon(Icons.remove_red_eye_rounded, color: Colors.grey),
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)),
+                            borderRadius: BorderRadius.circular(20)),
                       ),
                     ),
                   ),
@@ -106,7 +106,7 @@ class ResetPage extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.redAccent,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(20),
                       ),
                       padding: const EdgeInsets.symmetric(
                         vertical: 12,

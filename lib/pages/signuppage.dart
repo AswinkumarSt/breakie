@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
           Center(
             child: Container(
               width: 289,
-              height: 510,
+              height: 560,
               padding: const EdgeInsets.only(top: 20, left: 0),
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.9),
@@ -34,13 +34,14 @@ class LoginPage extends StatelessWidget {
                 ],
               ),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(top: 20, left: 0),
+                        margin: const EdgeInsets.only(top: 0, left: 0),
                         child: const Image(
                           image: AssetImage('assets/icons/Vector 4.png'),
                         ),
@@ -55,7 +56,6 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10),
                   const Text(
                     'Login',
                     style: TextStyle(
@@ -63,7 +63,24 @@ class LoginPage extends StatelessWidget {
                       color: Colors.black87,
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 24, right: 24),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Username',
+                        hintStyle: TextStyle(
+                          color: Colors.grey.withOpacity(0.6),
+                          fontSize: 10,
+                        ),
+                        suffixIcon: const Icon(Icons.person_pin_outlined,
+                            color: Colors.grey),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
                   Padding(
                     padding: const EdgeInsets.only(left: 24, right: 24),
                     child: TextField(
@@ -80,7 +97,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   Padding(
                     padding: const EdgeInsets.only(left: 24, right: 24),
                     child: TextField(
@@ -96,45 +113,33 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
-
-                  // Remember Me and Forgot Password Row
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Checkbox(
-                            value: true,
-                            onChanged: (value) {},
-                            activeColor: Colors.redAccent,
-                          ),
-                          const Text(
-                            'Remember me',
-                            style:
-                                TextStyle(fontSize: 12, color: Colors.black87),
-                          ),
-                        ],
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                      Navigator.pushNamed(context, '/resetpage');
-                          // Add Forgot Password Functionality
-                        },
-                        child: const Padding(
-                          padding: EdgeInsets.only(right: 25.0),
-                          child: Text(
-                            'Forgot Password',
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.redAccent,
-                              decoration: TextDecoration.underline,
-                            ),
-                          ),
+                  const SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 24, right: 24),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Confirm Password',
+                        hintStyle: TextStyle(
+                          color: Colors.grey.withOpacity(0.6),
+                          fontSize: 10,
                         ),
+                        suffixIcon: const Icon(Icons.key, color: Colors.grey),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
                       ),
-                    ],
+                    ),
                   ),
+                 const Padding(
+                    padding:  EdgeInsets.only(right: 78.0),
+                    child:  Text(
+                      '*indicates required answers.',
+                      style: TextStyle(                     
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 0),
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
@@ -148,7 +153,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     child: const Text(
-                      'Login',
+                      'Submit',
                       style: TextStyle(fontSize: 16),
                     ),
                   ),
@@ -180,37 +185,36 @@ class LoginPage extends StatelessWidget {
                           },
                           icon: const Image(
                             image: AssetImage('assets/icons/Group.png'),
-                            
                           ),
                         ),
-                         IconButton(
+                        IconButton(
                           onPressed: () {
                             //yahoo functionality
                           },
                           icon: const Image(
                             image: AssetImage('assets/icons/Gmail.png'),
-                            
                           ),
                         ),
-                         IconButton(
+                        IconButton(
                           onPressed: () {
                             //yahoo functionality
                           },
                           icon: const Image(
                             image: AssetImage('assets/icons/Facebook.png'),
-                            
                           ),
                         ),
                       ],
                     ),
                   ),
-                 
                   Row(
                     children: [
-                      IconButton(onPressed: () {
-                      Navigator.pop(context);
-                      Navigator.pushNamed(context, '/homepage');
-                      }, icon: Icon(Icons.arrow_back_outlined),),
+                      IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/homepage');
+                        },
+                        icon: Icon(Icons.arrow_back_outlined),
+                      ),
                     ],
                   )
                 ],

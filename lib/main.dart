@@ -1,6 +1,7 @@
 import 'package:breakie/pages/homepage.dart';
 import 'package:breakie/pages/loginpage.dart';
 import 'package:breakie/pages/resetpassword.dart';
+import 'package:breakie/pages/signuppage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/homepage' :(context) => const HomePage(),
         '/loginpage' :(context)=> const LoginPage(),
-        '/resetpage' :(context)=> const ResetPage()
+        '/resetpage' :(context)=> const ResetPage(),
+        '/signuppage' :(context)=> const SignUpPage() 
       },
     );
   }
